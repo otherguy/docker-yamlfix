@@ -5,13 +5,11 @@ _This repository provides the [`otherguy/yamlfix`][dockerhub] image_
 [![Docker Pulls](https://img.shields.io/docker/pulls/otherguy/yamlfix)][dockerhub]
 [![Docker Stars](https://img.shields.io/docker/stars/otherguy/yamlfix)][dockerhub]
 [![GitHub issues](https://img.shields.io/github/issues/otherguy/docker-yamlfix)][issues]
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/otherguy/yamlfix)][microbadger]
 [![GitHub stars](https://img.shields.io/github/stars/otherguy/docker-yamlfix?color=violet)][stargazers]
 [![MIT License](https://img.shields.io/github/license/otherguy/docker-yamlfix?color=orange)][license]
 
 [dockerhub]: https://hub.docker.com/r/otherguy/yamlfix/
 [license]: https://tldrlegal.com/license/mit-license
-[microbadger]: https://microbadger.com/images/otherguy/yamlfix
 [stargazers]: https://github.com/otherguy/docker-yamlfix/stargazers
 [issues]: https://github.com/otherguy/docker-yamlfix/issues
 
