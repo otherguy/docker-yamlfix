@@ -5,7 +5,6 @@ _This repository provides the [`otherguy/yamlfix`][dockerhub] image_
 [![Docker Pulls](https://img.shields.io/docker/pulls/otherguy/yamlfix)][dockerhub]
 [![Docker Stars](https://img.shields.io/docker/stars/otherguy/yamlfix)][dockerhub]
 [![GitHub issues](https://img.shields.io/github/issues/otherguy/docker-yamlfix)][issues]
-[![Travis](https://img.shields.io/travis/com/otherguy/docker-yamlfix)][travis]
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/otherguy/yamlfix)][microbadger]
 [![GitHub stars](https://img.shields.io/github/stars/otherguy/docker-yamlfix?color=violet)][stargazers]
 [![MIT License](https://img.shields.io/github/license/otherguy/docker-yamlfix?color=orange)][license]
