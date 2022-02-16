@@ -20,7 +20,8 @@ _This repository provides the [`otherguy/yamlfix`][dockerhub] image_
 [`yamlfix`](https://github.com/lyz-code/yamlfix) is a simple, opinionated yaml formatter that keeps your comments
 and is written by [lyz](https://github.com/lyz-code/).
 
-This Docker image intends to bring the awesomeness of [`yamlfix`](https://github.com/lyz-code/yamlfix) to Docker and especially [whalebrew](https://github.com/whalebrew/whalebrew).
+This Docker image intends to bring the awesomeness of [`yamlfix`](https://github.com/lyz-code/yamlfix) to Docker and
+especially [whalebrew](https://github.com/whalebrew/whalebrew).
 
 ## 🛠 Usage
 
