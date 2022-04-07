@@ -3,7 +3,9 @@ FROM python:3.10.4-slim
 WORKDIR /workdir
 
 # Install
-RUN pip install yamlfix==0.8.0
+COPY requirements.txt .
+RUN pip install -r requirements.txt \
+ && rm requirements.txt
 
 # Build arguments
 ARG VCS_REF=master
