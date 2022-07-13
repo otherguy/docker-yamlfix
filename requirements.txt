@@ -1,1 +1,1 @@
-yamlfix==0.9.0
+yamlfix==0.10.0
