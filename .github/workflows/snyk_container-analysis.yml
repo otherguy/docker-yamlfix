@@ -34,6 +34,7 @@ jobs:
         args: --file=Dockerfile
         json: true
         sarif: true
+    - uses: garethr/snyk-to-sarif@master
     - name: Upload the SARIF file to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
