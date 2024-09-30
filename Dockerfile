@@ -5,7 +5,7 @@ WORKDIR /workdir
 # Install
 COPY requirements.txt .
 RUN pip install -r requirements.txt \
-  && rm requirements.txt
+ && rm requirements.txt
 
 # Build arguments
 ARG VCS_REF=master
