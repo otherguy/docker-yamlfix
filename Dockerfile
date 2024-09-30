@@ -1,10 +1,10 @@
-FROM python:3.11.3-slim
+FROM python:3.12.6-slim
 
 WORKDIR /workdir
 
 # Install
 COPY requirements.txt .
-RUN pip install -r requirements.txt \
+RUN pip install --no-cache-dir -r requirements.txt \
  && rm requirements.txt
 
 # Build arguments
