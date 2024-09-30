@@ -25,7 +25,6 @@ jobs:
         DOCKER_BUILDKIT: 1
       run: docker build -t otherguy/yamlfix:${{ github.sha }} .
     - name: Run Snyk to check Docker image for vulnerabilities
-      continue-on-error: true
       uses: snyk/actions/docker@master
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -33,15 +32,7 @@ jobs:
         image: otherguy/yamlfix:${{ github.sha }}
         args: --file=Dockerfile
         json: true
-    - uses: garethr/snyk-to-sarif@master
-    - uses: actions/upload-artifact@v4
-      with:
-        name: SARIF
-        path: snyk.sarif
-    - uses: actions/upload-artifact@v4
-      with:
-        name: Snyk JSON output
-        path: snyk.json
+        sarif: true
     - name: Upload the SARIF file to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
