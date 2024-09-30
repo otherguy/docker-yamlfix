@@ -1,9 +1,17 @@
 FROM python:3.12.6-slim
 
+
+# Create nonroot user and group
+RUN useradd --system --user-group --uid 1001 --home-dir /workdir nonroot
+
+# Switch to nonroot user
+USER nonroot:nonroot
+
+# Set working directory
 WORKDIR /workdir
 
 # Install
-COPY requirements.txt .
+COPY --chown=nonroot:nonroot requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
  && rm requirements.txt
 
@@ -21,11 +29,10 @@ LABEL org.opencontainers.image.created="${BUILD_DATE}"
 LABEL org.opencontainers.image.revision="${VCS_REF}"
 
 # Maintainer
-LABEL maintainer                              'otherguy <hi@otherguy.io>'
+LABEL maintainer="otherguy <hi@otherguy.io>"
 
 # Whalebrew
-LABEL io.whalebrew.name                       'yamlfix'
-LABEL io.whalebrew.config.keep_container_user 'false'
-LABEL io.whalebrew.config.working_dir         '$PWD'
+LABEL io.whalebrew.name="yamlfix"
+LABEL io.whalebrew.config.keep_container_user="false"
 
-ENTRYPOINT ["/usr/local/bin/yamlfix"]
+ENTRYPOINT ["/workdir/.local/bin/yamlfix"]
