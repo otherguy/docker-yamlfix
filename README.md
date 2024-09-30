@@ -41,3 +41,4 @@ Bug reports and pull requests are welcome on GitHub at [`otherguy/docker-yamlfix
 ## ♥️ Acknowledgements
 
 - [lyz](https://github.com/lyz-code/) for creating [`yamlfix`](https://github.com/lyz-code/yamlfix)
+- [devantler](https://github.com/devantler) for [updates and improvements](https://github.com/otherguy/docker-yamlfix/pulls?q=is%3Apr+author%3Adevantler)
