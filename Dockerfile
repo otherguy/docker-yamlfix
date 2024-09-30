@@ -34,5 +34,6 @@ LABEL maintainer="otherguy <hi@otherguy.io>"
 # Whalebrew
 LABEL io.whalebrew.name="yamlfix"
 LABEL io.whalebrew.config.keep_container_user="false"
+LABEL io.whalebrew.config.working_dir='$PWD'
 
 ENTRYPOINT ["/workdir/.local/bin/yamlfix"]
