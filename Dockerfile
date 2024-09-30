@@ -10,9 +10,6 @@ USER nonroot:nonroot
 # Set working directory
 WORKDIR /workdir
 
-# Configure PATH
-ENV PATH="/workdir/.local/bin:${PATH}"
-
 # Install
 COPY --chown=nonroot:nonroot requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
@@ -38,4 +35,4 @@ LABEL maintainer="otherguy <hi@otherguy.io>"
 LABEL io.whalebrew.name="yamlfix"
 LABEL io.whalebrew.config.keep_container_user="false"
 
-ENTRYPOINT ["yamlfix"]
+ENTRYPOINT ["/workdir/.local/bin/yamlfix"]
