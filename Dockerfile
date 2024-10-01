@@ -1,19 +1,18 @@
 FROM python:3.12.6-slim
 
-
 # Create nonroot user and group
 RUN useradd --system --user-group --uid 1001 --home-dir /workdir nonroot
+
+# Install
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt \
+ && rm /tmp/requirements.txt
 
 # Switch to nonroot user
 USER nonroot:nonroot
 
 # Set working directory
 WORKDIR /workdir
-
-# Install
-COPY --chown=nonroot:nonroot requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt \
- && rm requirements.txt
 
 # Build arguments
 ARG VCS_REF=master
@@ -36,4 +35,4 @@ LABEL io.whalebrew.name="yamlfix"
 LABEL io.whalebrew.config.keep_container_user="false"
 LABEL io.whalebrew.config.working_dir='$PWD'
 
-ENTRYPOINT ["/workdir/.local/bin/yamlfix"]
+ENTRYPOINT ["yamlfix"]
