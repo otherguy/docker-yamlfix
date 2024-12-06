@@ -1,4 +1,4 @@
-FROM python:3.13.0-slim
+FROM python:3.13.1-slim
 
 # Create nonroot user and group
 RUN useradd --system --user-group --uid 1001 --home-dir /workdir nonroot
